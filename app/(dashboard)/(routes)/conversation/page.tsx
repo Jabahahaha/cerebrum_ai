@@ -43,8 +43,13 @@ const ConversationPage = () => {
       const newMessages = [...messages, userMessage];
       
       const response = await axios.post('/api/conversation', { messages: newMessages });
-      setMessages((current) => [...current, userMessage, response.data]);
-      
+
+      // Create a new bot message object using the output from the server's response
+      const botMessage: ChatCompletionRequestMessage = { role: "assistant", content: response.data.message };
+
+      // Add both the user's message and the bot's message to the state
+      setMessages((current) => [...current, userMessage, botMessage]);
+
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
@@ -55,7 +60,7 @@ const ConversationPage = () => {
     } finally {
       router.refresh();
     }
-  }
+  };
 
   return ( 
     <div>

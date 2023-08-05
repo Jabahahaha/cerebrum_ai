@@ -2,7 +2,6 @@
 
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 
 
@@ -23,25 +22,36 @@ const testimonials = [
 
 export const LandingContent = () => {
   return (
-    
-    <div className="px-10 pb-20">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="mt-10 pb-20 md:pb-10  mx-10 sm:mx-10 md:mx-10 md:max-w-[1200px] ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 w-full">
         {testimonials.map((item) => (
-          <Card key={item.description} className="bg-[#222222] border-none text-zinc-400 text-center">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-x-2">
-                <div>
-                  <p className="text-lg">{item.name}</p>
-                  <p className="text-white text-lg text-center">{item.title}</p>
-                </div>
-              </CardTitle>
-              <CardContent className="pt-4 px-0">
-                {item.description}
-              </CardContent>
-            </CardHeader>
-          </Card>
+          <div key={item.description} className="text-zinc-400 text-left p-0 w-full">
+            <h3 className="text-lg text-white font-semibold leading-none tracking-tight">
+              {item.title}
+            </h3>
+            <p className="text-sm text-muted-foreground pt-4">
+              {item.description}
+            </p>
+          </div>
         ))}
       </div>
     </div>
-  )
+  );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

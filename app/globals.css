@@ -6,6 +6,7 @@ html,
 body,
 :root {
   height: 100%;
+  
 }
  
 @layer base {
@@ -73,6 +74,44 @@ body,
     --ring: 12 6.5% 15.1%;
   }
 }
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  font-size: 24px;
+  font-family: Arial, sans-serif; 
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+
  
 @layer base {
   * {

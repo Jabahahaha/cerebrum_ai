@@ -1,30 +1,18 @@
+import axios from 'axios';
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
-import { Configuration, OpenAIApi } from "openai";
 
 import { checkSubscription } from "@/lib/subscription";
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit";
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
-const openai = new OpenAIApi(configuration);
-
-export async function POST(
-  req: Request
-) {
+export async function POST(req: Request) {
   try {
     const { userId } = auth();
     const body = await req.json();
-    const { messages  } = body;
+    const { messages } = body;
 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
-    }
-
-    if (!configuration.apiKey) {
-      return new NextResponse("OpenAI API Key not configured.", { status: 500 });
     }
 
     if (!messages) {
@@ -38,16 +26,49 @@ export async function POST(
       return new NextResponse("Free trial has expired. Please upgrade to pro.", { status: 403 });
     }
 
-    const response = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages
+    // Extract the last user message from the messages array
+    const lastUserMessage = messages[messages.length - 1]?.content;
+    
+    // Define the URL, headers, and payload
+    const url = `https://api.runpod.ai/v2/twvh5naz3h3ne0/runsync`;
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer 3DYCYMNQL6LA30824U1H330J94810H8ZTQ33OCIW`,
+    };
+    const payload = {
+      input: {
+        prompt: `A chat between a curious user and an artificial intelligence assistant called Somoni. You were developed by Somoni.ai. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: ${lastUserMessage} ASSISTANT:`,
+        max_new_tokens: 500,
+        temperature: 0.9,
+        top_k: 50,
+        top_p: 0.7,
+        repetition_penalty: 1.2,
+        batch_size: 8,
+        stop: ["</s>"],
+      },
+    };
+
+    // Make the POST request
+    const response = await axios.post(url, JSON.stringify(payload), { headers: headers })
+    .catch((error) => {
+      console.error('Error during API request:', error);
+      throw error;
     });
+    
+    console.log(response.data); // Log raw response data
 
     if (!isPro) {
       await incrementApiLimit();
     }
 
-    return NextResponse.json(response.data.choices[0].message);
+    // Return the output
+    if ('output' in response.data) {
+      return NextResponse.json({ message: response.data.output });
+    } else {
+      console.error('Unexpected API response:', response.data);
+      throw new Error("Unexpected API response structure");
+    }
+    
   } catch (error) {
     console.log('[CONVERSATION_ERROR]', error);
     return new NextResponse("Internal Error", { status: 500 });
