@@ -12,15 +12,15 @@ export const LandingHero = () => {
   return (
     <div className="text-white font-bold py-36 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <h1>Лучший ИИ Инструмент для</h1>
+        <h1>Best AI Tool for</h1>
         <div className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-600">
           <TypewriterComponent
             options={{
               strings: [
-                "Чат-бота.",
-                "Генерации фотографий.",
-                "Написания эссе.",
-                "Написания писем."
+                "Chatbot.",
+                "Generating images.",
+                "Essay writing.",
+                "Solving math problems.",
               ],
               autoStart: true,
               loop: true,
@@ -29,12 +29,12 @@ export const LandingHero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-zinc-400">
-        Создания контента с ИИ в 10 раз быстрее.
+      Content creation with AI is 10 times faster.
       </div>
       <div>
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button variant="premium" className="md:text-lg p-4 md:p-6 rounded-full font-semibold">
-            Начните Генерировать Бесплатно
+            Start Generating For Free
           </Button>
         </Link>
       </div>

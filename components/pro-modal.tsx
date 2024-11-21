@@ -43,7 +43,7 @@ export const ProModal = () => {
         <DialogHeader>
           <DialogTitle className="flex justify-center items-center flex-col gap-y-4 pb-2">
             <div className="flex items-center gap-x-2 text-neutral-50 font-bold text-xl">
-              Upgrade to Somoni.ai
+              Upgrade to Cerebrum.ai
               <Badge variant="premium" className="uppercase text-sm py-1">
                 pro
               </Badge>

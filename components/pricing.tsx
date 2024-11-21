@@ -31,12 +31,12 @@ const Pricing = () => {
         <h3 className="text-medium font-semibold text-emerald-500 text-center mb-2">PRO</h3>
 
         {subscriptionType === 'monthly' ? (
-          <h4 className="text-2xl font-bold text-center mb-2 text-white">39,90 TJS per month</h4>
+          <h4 className="text-2xl font-bold text-center mb-2 text-white">9,90 EUR per month</h4>
         ) : (
           <div className="flex flex-col items-center justify-center mb-2">
             <div className="flex items-center justify-center">
-              <h4 className="text-2xl font-bold text-center text-white">29,90 TJS per month</h4>
-              <button className="ml-3 bg-emerald-500 text-white rounded-lg px-2 py-1 h-8 w-30 font-semibold">Save 25%</button>
+              <h4 className="text-2xl font-bold text-center text-white">6,90 EUR per month</h4>
+              <button className="ml-3 bg-emerald-500 text-white rounded-lg px-2 py-1 h-8 w-30 font-semibold">Save 30%</button>
             </div>
             <p className="text-muted-foreground">Billed Annually</p>
           </div>
@@ -48,7 +48,7 @@ const Pricing = () => {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 text-emerald-500">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
-          <p className="ml-4 text-white">Unlimited use of Somoni GPT</p>
+          <p className="ml-4 text-white">Unlimited use of Cerebrum GPT</p>
         </div>
         <div className="flex items-center justify-start w-full mb-10">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 text-emerald-500">

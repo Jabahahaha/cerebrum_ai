@@ -7,16 +7,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const testimonials = [
   {
-    title: "Взаимодействуйте с сообществом",
-    description: "Общайтесь с другими создателями и единомышленниками, чтобы создать сообщество вокруг вашего бренда. Делитесь своими любимыми изображениями, получайте отзывы и сотрудничайте с другими, чтобы улучшить свои навыки и создать еще лучший контент.",
+    title: "Engage with the community",
+    description: "Connect with other creators and like-minded people to build a community around your brand. Share your favorite images, get feedback, and collaborate with others to improve your skills and create even better content.",
   },
   {
-    title: "Исследуйте свою креативность",
-    description: "Раскройте свой творческий потенциал с помощью различных моделей и инструментов, которые помогут вам создавать уникальные и потрясающие изображения. Наш инструмент для создания изображений на основе искусственного интеллекта позволяет вам экспериментировать с различными стилями, чтобы воплотить свои идеи в жизнь.",
+    title: "Explore your creativity",
+    description: "Unleash your creativity with a variety of models and tools to help you create unique and stunning images. Our AI-powered image maker lets you experiment with different styles to bring your ideas to life.",
   },
   {
-    title: "Сэкономьте время и деньги",
-    description: "Благодаря нашим простым в использовании инструментам и шаблонам вы можете попрощаться с трудоемким программным обеспечением и поприветствовать более эффективный и экономичный способ создания потрясающих изображений.",
+    title: "Save time and money",
+    description: "With our easy-to-use tools and templates, you can say goodbye to time-consuming software and hello to a more efficient and cost-effective way to create stunning images.",
   },
 ];
 

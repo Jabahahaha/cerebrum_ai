@@ -65,7 +65,7 @@ const ConversationPage = () => {
   return ( 
     <div>
       <Heading
-        title="Somoni GPT"
+        title="Cerebrum GPT"
         description="Наша самая продвинутая языковая модель"
         icon={MessageSquare}
         iconColor="text-emerald-500"

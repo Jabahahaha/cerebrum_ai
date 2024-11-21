@@ -19,7 +19,7 @@ const routes = [
     color: "text-emerald-500"
   },
   {
-    label: 'Somoni GPT',
+    label: 'Cerebrum GPT',
     icon: MessageSquare,
     href: '/conversation',
     color: "text-emerald-500",
@@ -73,7 +73,7 @@ export const Sidebar = ({
             <Image fill alt="Logo" src="/logo211.png" />
           </div>
           <h1 className={cn("text-2xl font-bold", poppins.className)}>
-            Somoni.ai
+            Cerebrum.ai
           </h1>
         </Link>
         <div className="space-y-1">

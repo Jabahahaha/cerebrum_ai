@@ -10,7 +10,7 @@ import './globals.css'
 const font = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Somoni.ai',
+  title: 'Cerebrum.ai',
   description: 'ИИ Платформа',
 }
 

@@ -4,7 +4,7 @@ export const MAX_FREE_COUNTS = 10;
 
 export const tools = [
   {
-    label: 'Somoni GPT',
+    label: 'Cerebrum GPT',
     icon: MessageSquare,
     href: '/conversation',
     color: "text-emerald-500",

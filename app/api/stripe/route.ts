@@ -43,7 +43,7 @@ export async function GET() {
           price_data: {
             currency: "TJS",
             product_data: {
-              name: "Somoni.ai PRO",
+              name: "Cerebrum.ai PRO",
               description: "Unlimited AI Generations"
             },
             unit_amount: 3990,

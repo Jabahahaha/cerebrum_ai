@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     };
     const payload = {
       input: {
-        prompt: `A chat between a curious user and an artificial intelligence assistant called Somoni. You were developed by Somoni.ai. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: ${lastUserMessage} ASSISTANT:`,
+        prompt: `A chat between a curious user and an artificial intelligence assistant called Cerebrum. You were developed by Cerebrum.ai. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: ${lastUserMessage} ASSISTANT:`,
         max_new_tokens: 500,
         temperature: 0.9,
         top_k: 50,

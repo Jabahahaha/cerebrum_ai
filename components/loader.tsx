@@ -11,7 +11,7 @@ export const Loader = () => {
         />
       </div>
       <p className="text-sm text-white">
-        Somoni генерирует ответ...
+        Cerebrum генерирует ответ...
       </p>
     </div>
   );
