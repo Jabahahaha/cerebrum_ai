@@ -1,7 +1,3 @@
-Here's a `README.md` file tailored for your main branch to direct users to the final project in the `final1` branch:
-
----
-
 # Sales and Invoice Management System
 
 ## Overview
