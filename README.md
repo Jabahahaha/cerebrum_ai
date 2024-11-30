@@ -1,10 +1,34 @@
+Here's a `README.md` file tailored for your main branch to direct users to the final project in the `final1` branch:
+
+---
+
 # Sales and Invoice Management System
 
-## Important Notice
-The final version of this project is located in the **`final1`** branch of this repository. If you're looking for the completed project with all its features, please switch to the **`final1`** branch.
+## Overview
+This repository contains the Sales and Invoice Management System project. **Please note**: the final version of the project is located in the `final1` branch.
 
-### How to Switch to the Final Version
-1. Clone this repository if you haven't already:
+---
+
+## Branches
+
+- **`main`**: Contains placeholder or default content with a pointer to the final branch.
+- **`final1`**: The final and complete implementation of the Sales and Invoice Management System.
+
+---
+
+## Final Project Details
+To view or work with the final version of the project:
+1. Switch to the `final1` branch using the following command:
+
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git checkout final1
+   ```
+
+2. If you do not have the branch locally, pull it from the remote repository:
+
+   ```bash
+   git fetch origin final1
+   git checkout final1
+   ```
+
+---
