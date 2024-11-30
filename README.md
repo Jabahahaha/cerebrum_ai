@@ -1,7 +1,3 @@
-Here's an example of what your `README.md` file could look like, with instructions for running your project and a note about adding supplier and customer data through SQL:
-
----
-
 # Sales and Invoice Management System
 
 ## Project Description
